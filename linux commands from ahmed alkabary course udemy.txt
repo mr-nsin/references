@@ -1,0 +1,125 @@
+--ls Command
+    1. ls -i -> shows the index number with list of files.
+    2. ls -i / -> shows the index number of root directory.
+    3. ls -l -> shows the all details of files like size and date created.
+    
+
+--ln Command (link)
+    1. ln [filename] [hardlinkname] -> creates hardlink for filename (exact same copy, file size and index number) (Not allowed for directory).
+    2. ln -s [filename] [hardlinkname] -> creates softlink for filename (contains the reference of original file).
+
+--touch Command
+    1. Used for changing the current timestamp of the file or directory.
+    2. Helpful in creating files, can not create directory.
+
+--mkdir Command
+    1. Make directory, it is used to create directory.
+
+--rmdir Command
+    1. Remove directory not the file, delete the empty directory (if not empty then do not remove).
+
+--rm Command
+    1. Use to remove the directory and files. 
+    2. To delete directory recursively use -> rm -R [dirname]
+    3. To delete files use -> rm [filename]
+    4. To delete an empty directory use -> rm -r [dirname]
+    5. To delete with an interactive option use -> rm -i [filename]
+    6. To delete with force -> rm -f [dirname]
+    7. To delete in verbose mode (summary) -> rm -v [dirname]
+
+--cp Command
+    1. To copy the files and directory. it will override the contents.
+    2. To copy the file use -> cp [sourcefilename] [outputfilename]
+    3. To copy directory use -> cp -R [sourcedirname] [outputdirname]
+    4. We can use interactive and verbose option as the same.
+
+--mv Command
+    1. The move Command can be used to rename the file name.
+    2. The files with dot referred as hidden files.
+    3. To rename the file or directory use -> mv [sourcefilename] [targetfilename]
+    4. Move Command will override the existing file.
+    5. 
+
+--file Command
+    1. It can be used to determine the file type. Use -> file [filename]
+    2. We can use three different ways to include space in dir name
+        a. single quote -> 'my dir'
+        b. double quote -> "my dir"
+        c. blackslash   -> my\ dir
+
+--Keyboard Shortcut
+    1. Ctrl + A -> to reach start of the line.
+    2. Ctrl + E -> to reach end of the line.
+    3. Ctrl + D -> to delete a char.
+    4. Alt + B -> jump one word backword.
+    5. Alt + F -> jump one word forward.
+    6. Alt + U -> change word to upper case.
+    7. Alt + L -> change word to lower case.
+    8. Ctrl + K -> to cut the text in forward direction from the cursor position.
+    9. Ctrl + Y -> to paste the text that was cut.
+    10. Ctrl + U -> to cut the text in backward direction from the cursor position.
+    11. Ctrl + L -> to clear up the screen.
+
+
+--history Command
+    1. history command is used to find all the last history of commands executed.
+    2. history -c -> is used to clear all the history.
+    3. to run previous command use -> ![linenumber]
+
+--head and tail Command
+    1. use to show first and last ten lines of text files.
+    2. head -n [lines] [filename] to show n number of lines.
+
+--wc command
+    1. use to count the word in text files. returns -> line number, word count, byte/file size, file name.
+    2. wc -w [filename] -> no of words
+    3. wc -l [filename] -> no of lines
+    4. wc -c [filename] -> no of bytes
+    5. wc -L [filename] -> no of characters in longest line.
+
+--Types of command in linux
+    1. Executable program. example -> cp command (found under the bin directory)
+    2. Shell Builtins. example -> cd command
+    3. Shell Scripts. example -> 
+    4. Alias.
+
+    Note : only shell Builtins are not executable program.
+
+--which command
+    1. To display the path of executable program not with shell builtin.
+
+--help and manual command
+    1. help command is used to find information or option available with only
+        shell builtin commands.
+    2. man -> command is used to find information or options available with other
+        than shell builtin commands.
+
+--Whatis command
+    1. This command is used to find 1 line manual details(i.e. brief description) of the executable program.
+
+--Multiple command at same time.
+    1. use semicolon to separate multiple commands.
+    2. If command casing is not matched, then will show the error for that command 
+        and execute rest of the commands.
+    3. use && (and) operator (short circuit operator), to execute multiple commands.
+        if one of the commands fails rest of it will not execute.
+    
+--Wildcards
+    1. * -> used to match any number of characters.
+    2. ? -> used for single character.
+    3. [range] -> to specify the range of character to include
+    4. [!range] -> complement of 3rd command.
+    5. Category of characters for matching.
+        -> [[:digit:]], [[:alpha:]], [[:alpha:]], [[:alnum:]],
+            [[:upper:]], [[:lower:]]
+
+--Aliasing
+    1. The is used to give the name to combination of commands.
+    2. Very helpful in daily life.
+    3. Use -> alias [aliasname]="[commands]"
+    4. To free the alias name use -> unalias [aliasname]
+    5. To keep the alias name permanantaly save it in .bashrc file in every user directory.
+    6. To know all the alias present use -> alias
+    7. To know if alias exist for a name or not use -> type [aliasname]
+
+
